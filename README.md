@@ -3,12 +3,12 @@
 ## Identitas
 | | |
 |---|---|
-| Nama | (isi nama lengkap) |
-| NIM | (isi NIM) |
-| Kelas | D4 MI 2025 / (isi A, B, atau C) |
+| Nama | (Michel Brady Girsang) |
+| NIM | (25091397107) |
+| Kelas | D4 MI 2025C |
 | Kelompok | 7 |
 | Dosen | Ari Kurniawan, S.Kom., M.T. |
-| Topik | Website Kantin Kampus (sesuai proposal kelompok) |
+| Topik | Website Kantin Kampus |
 
 ## Deskripsi singkat
 Website Kantin Kampus membantu mahasiswa melihat menu, harga, dan ketersediaan makanan atau minuman di kantin tanpa harus datang dulu. Pada UTS ini saya mengerjakan tiga halaman: **Dashboard**, **Daftar Menu**, dan **Detail Menu**. Pembagian ini sudah didiskusikan dengan anggota kelompok agar pekerjaan 2.a, 2.b, dan 2.c tidak sama (ketentuan 2.d).
