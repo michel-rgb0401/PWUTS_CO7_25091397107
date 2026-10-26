@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kantin Kampus</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="#dashboard" data-page="dashboard">🍽️ Kantin Kampus</a>
+  <button id="btn-menu" aria-label="Buka navigasi">☰</button>
+  <nav id="nav">
+  <a href="#dashboard" data-page="dashboard">Dashboard</a>
+  <a href="#menu" data-page="menu">Daftar Menu</a>
+  <a href="#keranjang" data-page="keranjang" class="keranjang">
+    🛒 Keranjang (<span id="badge">0</span>)
+  </a>
+</nav>
+</header>
+
+<!-- Halaman 2.b dan 2.c dimuat ke sini lewat Ajax -->
+<main id="konten"><p class="loading">Memuat...</p></main>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

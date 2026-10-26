@@ -1,0 +1,519 @@
+
+/* ========================================
+   1. VARIABEL WARNA
+======================================== */
+:root {
+    --hijau: #1e7a46;
+    --gelap: #14301f;
+    --muda: #e8f3ec;
+    --oren: #d9730d;
+    --abu: #5b6b61;
+    --merah: #c0392b;
+}
+
+/* ========================================
+   2. PENGATURAN DASAR
+======================================== */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", system-ui, sans-serif;
+    color: var(--gelap);
+    background: #fafcfa;
+    line-height: 1.5;
+}
+
+/* ========================================
+   3. HEADER DAN NAVIGASI
+======================================== */
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0.8rem 1.2rem;
+    background: var(--hijau);
+    position: sticky;
+    top: 0;
+    z-index: 5;
+}
+
+.brand {
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+#btn-menu {
+    display: none;
+    background: none;
+    border: 0;
+    color: #fff;
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+
+#nav a {
+    color: #e8f3ec;
+    text-decoration: none;
+    margin-left: 1.2rem;
+    padding: 0.3rem 0;
+    border-bottom: 2px solid transparent;
+}
+
+#nav a.aktif,
+#nav a:hover {
+    color: #fff;
+    border-color: #fff;
+}
+
+#badge {
+    background: var(--oren);
+    color: #fff;
+    border-radius: 99px;
+    padding: 0 0.5rem;
+    font-size: 0.8rem;
+}
+
+.keranjang {
+    color: #fff;
+    margin-left: 1.2rem;
+}
+
+/* ========================================
+   4. KONTEN UTAMA DAN FOOTER
+======================================== */
+main {
+    max-width: 1000px;
+    margin: auto;
+    padding: 1.5rem 1.2rem 5rem;
+    min-height: 70vh;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    color: var(--abu);
+    font-size: 0.85rem;
+}
+
+/* ========================================
+   5. HERO / BANNER UTAMA
+======================================== */
+.hero {
+    background: var(--muda);
+    padding: 2.5rem 1.5rem;
+    border-radius: 12px;
+}
+
+.hero h1 {
+    font-size: clamp(1.8rem, 5vw, 2.8rem);
+    margin: 0 0 0.5rem;
+}
+
+/* ========================================
+   6. TOMBOL
+======================================== */
+.btn {
+    display: inline-block;
+    background: var(--hijau);
+    color: #fff;
+    border: 0;
+    padding: 0.6rem 1.1rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background: var(--gelap);
+}
+
+.btn:disabled {
+    background: #b5beb8;
+    cursor: not-allowed;
+}
+
+.btn-ghost {
+    background: #fff;
+    color: var(--hijau);
+    border: 1px solid var(--hijau);
+}
+
+/* ========================================
+   7. INFORMASI DAN STATISTIK
+======================================== */
+.info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.info div {
+    border: 1px solid #d5e2da;
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+.info span {
+    display: block;
+    color: var(--abu);
+}
+
+.stat {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.stat div {
+    border: 1px solid #d5e2da;
+    border-radius: 10px;
+    padding: 1rem;
+    background: #fff;
+}
+
+.stat b {
+    font-size: 2rem;
+    display: block;
+}
+
+.stat span {
+    color: var(--abu);
+}
+
+/* ========================================
+   8. FORM INPUT DAN SELECT
+======================================== */
+input,
+select {
+    width: 100%;
+    padding: 0.6rem;
+    border: 1px solid #b8c8be;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.tools {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    align-items: center;
+}
+
+.tools {
+    margin-bottom: 15px; 
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+#kategori {
+    margin-top: 15px; 
+}
+
+.tools input {
+    max-width: 320px;
+}
+
+.kecil {
+    width: auto;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+}
+
+/* ========================================
+   9. FILTER KATEGORI
+======================================== */
+.chip {
+    border: 1px solid var(--hijau);
+    background: #fff;
+    color: var(--hijau);
+    padding: 0.4rem 0.9rem;
+    border-radius: 99px;
+    cursor: pointer;
+}
+
+.chip.aktif {
+    background: var(--hijau);
+    color: #fff;
+}
+
+/* ========================================
+   10. DAFTAR MENU DAN KARTU MENU
+======================================== */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1rem;
+}
+
+.kartu {
+    border: 1px solid #d5e2da;
+    border-radius: 10px;
+    padding: 1rem;
+    background: #fff;
+}
+
+.kartu h3 {
+    margin: 0.4rem 0 0;
+}
+
+.kartu p {
+    margin: 0.3rem 0;
+}
+
+/* Wadah gambar atau ikon menu */
+.foto {
+    font-size: 3rem;
+    text-align: center;
+    background: var(--muda);
+    border-radius: 8px;
+    padding: 0.6rem;
+}
+
+/* Gambar makanan pada kartu menu */
+.gambar-menu {
+    display: block;
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Wadah gambar pada kartu menu */
+.kartu .foto {
+    width: 100%;
+    height: 170px;
+    padding: 0;
+    overflow: hidden;
+    margin-bottom: 12px;
+}
+
+/* Harga dan teks pendukung */
+.harga {
+    color: var(--oren);
+    font-weight: 700;
+}
+
+.muted {
+    color: var(--abu);
+    font-size: 0.9rem;
+}
+
+/* ========================================
+   11. DETAIL MENU
+======================================== */
+.detail {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 2rem;
+}
+
+.foto.besar {
+    font-size: 7rem;
+    padding: 2rem;
+}
+
+.foto.besar .gambar-menu {
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.besar-teks {
+    font-size: 1.6rem;
+}
+
+.kembali {
+    color: var(--hijau);
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+/* ========================================
+   12. KERANJANG DAN TRANSAKSI
+======================================== */
+.cartbar {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #fff;
+    border-top: 2px solid var(--hijau);
+    padding: 0.7rem 1.2rem;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.dua {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.baris {
+    display: flex;
+    gap: 0.6rem;
+    align-items: center;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #e2ebe5;
+}
+
+.baris span {
+    margin-left: auto;
+}
+
+.hapus {
+    border: 0;
+    background: none;
+    color: var(--merah);
+    cursor: pointer;
+}
+
+.total {
+    font-size: 1.2rem;
+}
+
+/* ========================================
+   13. TABEL
+======================================== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+}
+
+th,
+td {
+    text-align: left;
+    padding: 0.6rem;
+    border-bottom: 1px solid #e2ebe5;
+}
+
+/* ========================================
+   14. PESAN VALIDASI DAN STATUS
+======================================== */
+.err {
+    color: var(--merah);
+    display: block;
+    font-weight: 400;
+}
+
+.ok {
+    color: var(--hijau);
+    font-weight: 600;
+}
+
+/* ========================================
+   15. EFEK FOKUS
+======================================== */
+input:focus,
+select:focus,
+button:focus-visible,
+a:focus-visible {
+    outline: 3px solid #f2b66b;
+}
+
+/* ========================================
+   16. RESPONSIVE UNTUK HP
+======================================== */
+@media (max-width: 700px) {
+    #btn-menu {
+        display: block;
+    }
+
+    #nav {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    #nav.buka {
+        display: flex;
+    }
+
+    #nav a {
+        margin: 0.6rem 0 0;
+    }
+
+    .dua,
+    .detail {
+        grid-template-columns: 1fr;
+    }
+
+    .keranjang {
+        margin: 0.6rem 0 0;
+    }
+}
+
+
+
+/* Gambar pada kartu menu */
+.gambar-menu {
+  display: block;
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Wadah gambar pada kartu menu */
+.kartu .foto {
+  width: 100%;
+  height: 170px;
+  padding: 0;
+  overflow: hidden;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+
+.foto.besar {
+  height: 280px;
+  overflow: hidden;
+  padding: 0;
+}
+
+.foto.besar .gambar-menu {
+  height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* Tombol navigasi keranjang */
+.keranjang {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 1.2rem;
+    padding: 0.3rem 0;
+}
+
+.keranjang:hover {
+    text-decoration: underline;
+}
+
+#badge {
+    display: inline-block;
+    background: #d9730d;
+    color: #fff;
+    border-radius: 50%;
+    min-width: 22px;
+    padding: 2px 6px;
+    text-align: center;
+    font-size: 0.8rem;
+}
